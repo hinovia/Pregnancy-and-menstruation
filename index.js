@@ -18,7 +18,7 @@ const extensionName = 'reproductive-system';
 const defaultSettings = {
     isEnabled: true,
     showNotifications: true,
-    language: 'ru',
+    language: 'en',
     contraception: 'none',
     cycleDay: 1,
     lastCycleUpdate: null,
@@ -148,7 +148,7 @@ function getPregnancyData() {
 function L(key) {
     try {
         const s = getSettings();
-        const lang = s?.language || 'ru';
+        const lang = s?.language || 'en';
         const keys = key.split('.');
         let result = LANG[lang];
         for (const k of keys) {
