@@ -18,7 +18,7 @@ const extensionName = 'reproductive-system';
 const defaultSettings = {
     isEnabled: true,
     showNotifications: true,
-    language: 'ru',
+    language: 'en',
     contraception: 'none',
     cycleDay: 1,
     lastCycleUpdate: null,
@@ -64,27 +64,6 @@ const CHANCES = {
 };
 
 const LANG = {
-    ru: {
-        title: 'Репродуктивная Система',
-        enabled: 'Включено',
-        notifications: 'Уведомления',
-        contraceptionTitle: 'Контрацепция',
-        contraceptionTypes: {
-            none: 'Нет защиты',
-            condom: '🛡️ Презерватив (85%)',
-            pill: '💊 Таблетки (91%)',
-            iud: '🩹 ВМС (99%)'
-        },
-        cycleDay: 'День цикла',
-        status: 'Статус',
-        notPregnant: 'Не беременна',
-        pregnant: 'Беременна',
-        conceptionSuccess: '✨ ЗАЧАТИЕ ПРОИЗОШЛО!',
-        conceptionFail: '❌ Зачатия не произошло',
-        contraceptionFailed: '⚠️ Контрацепция ПОДВЕЛА!',
-        stats: 'Проверок: {checks} | Зачатий: {conceptions}',
-        reset: 'Сбросить беременность'
-    },
     en: {
         title: 'Reproductive System',
         enabled: 'Enable',
@@ -148,7 +127,7 @@ function getPregnancyData() {
 function L(key) {
     try {
         const s = getSettings();
-        const lang = s?.language || 'ru';
+        const lang = s?.language || 'en';
         const keys = key.split('.');
         let result = LANG[lang];
         for (const k of keys) {
