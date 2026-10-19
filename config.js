@@ -7,7 +7,7 @@ export const extensionName = 'reproductive-system';
 export const defaultSettings = {
     isEnabled: true,
     showNotifications: true,
-    language: 'ru',
+    language: 'en',
     // Legacy alias for old saves/UI. New code keeps separate protection per carrier.
     contraception: 'none',
     contraceptionUser: 'none',
